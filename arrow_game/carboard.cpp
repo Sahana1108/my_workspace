@@ -8,7 +8,7 @@
 using std::string;
 using std::vector;
 
-// Sahana Sukumar S3897992
+// Sahana Sukumar 
 // This project required that I create a 10 X 10 board that could display a choice of 2 boards, initialize a player
 // and enable the user to move across the board one cell at a time.
 
