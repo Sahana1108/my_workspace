@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Question 2b - reCAPTCHA v3 implementation</title>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script>
+			function onSubmit(token) {
+				document.getElementById("createAccount").submit();
+			}
+		</script>
+		<style> body {background-color: #ffd9b3; font-family: Arial, Helvetica, sans-serif;}
+		ul { list-style: none; padding: 0; margin: 0;}
+		li { margin-top: 1em;}
+		label { display: inline-block; width: 120px;
+			text-align: left;}</style>
+	</head>
+	<body>
+		<div>
+			<h1>Create account</h1>
+			
+			<form id="createAccount" action="processv3.php" method="post">
+				<ul>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" id="email" required/>
+					</li>
+					<li>
+						<label for="password">Password</label>
+						<input type="password" id="password" required/>
+					</li>
+					<li>
+						<label for="confirmpassword">Confirm password</label>
+						<input type="password" id="confirmpassword" required/>
+					</li>
+					<li>
+						<button class="g-recaptcha" data-sitekey="6LcGWWwnAAAAAM8X5EZBIr52N4uJJDcA8qvTRYHR" data-callback="onSubmit" type="submit">Create account</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</body>
+</html>

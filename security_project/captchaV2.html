@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Question 2a - reCAPTCHA v2 implementation</title>
+		<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+		<script src="confirmpassword.js"></script>
+		<style> body {background-color: #ffd9b3; font-family: Arial, Helvetica, sans-serif;}
+		ul { list-style: none; padding: 0; margin: 0;}
+		li { margin-top: 1em;}
+		label { display: inline-block; width: 120px;
+			text-align: left;}</style>
+	</head>
+	<body>
+		<div>
+			<h1>Create account</h1>
+			
+			<form action="process.php" method="post">
+				<ul>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" id="email" required/>
+					</li>
+					<li>
+						<label for="password">Password</label>
+						<input type="password" id="password" required/>
+					</li>
+					<li>
+						<label for="confirmpassword">Confirm password</label>
+						<input type="password" id="confirmpassword" required/>
+					</li>
+					<li>
+						<div class="g-recaptcha" data-sitekey="6LfhbWgnAAAAABf3JgWw6D2VeoIGXZoUhC0KtcOY"></div>
+					</li>
+					<li>
+						<button type="submit">Create account</button>
+					</li>
+				</ul>
+			</form>
+		</div>
+	</body>
+</html>
